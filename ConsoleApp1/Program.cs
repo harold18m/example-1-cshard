@@ -19,6 +19,16 @@ namespace ConsoleApp1
 
             Console.WriteLine("El nombre completo es: " + persona.NombresCompletos);
             Console.Read();
+
+
+
+            Profesor profesor = new Profesor 
+            { 
+                Nombres = "Hugo",
+                Apellidos = "Torrico",
+                Sueldo = 15000
+
+            };
         }
     }
 }
