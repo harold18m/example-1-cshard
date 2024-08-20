@@ -10,25 +10,47 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Persona persona = new Persona();
+            Coordenada coordenada1 = new Coordenada
+            {
+                x = 10,
+                y = 20,
+            };
 
-            persona.Nombres = "Harold";
-            persona.Apellidos = "Medrano";
+            Coordenada coordenada2 = new Coordenada
+            {
+                x = 10,
+                y = 40,
+            };
 
-            persona.AsignarNombresCompletos();
+            Coordenada coordenada3 = new Coordenada
+            {
+                x = 20,
+                y = 20,
+            };
 
-            Console.WriteLine("El nombre completo es: " + persona.NombresCompletos);
+            Coordenada coordenada4 = new Coordenada
+            {
+                x = 20,
+                y = 40,
+            };
+
+            Rectangulo rectangulo = new Rectangulo
+            {
+                coordenadas =
+                {
+                    coordenada1,coordenada2,coordenada3,coordenada4                
+                }
+            };
+
+            rectangulo.calcularAltura();
+            rectangulo.calcularBase();
+            rectangulo.CalculadorArea();
+            rectangulo.CalcularPerimetro();
+
+            Console.WriteLine("El perimetro es :" + rectangulo.CalcularPerimetro());
+            Console.WriteLine("El area es :" + rectangulo.CalculadorArea());
             Console.Read();
 
-
-
-            Profesor profesor = new Profesor 
-            { 
-                Nombres = "Hugo",
-                Apellidos = "Torrico",
-                Sueldo = 15000
-
-            };
-        }
+        }  
     }
 }

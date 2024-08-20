@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Estudiante : Persona
+    public class Coordenada
     {
-        public string Codigo { get; set; }
+        public int x { get; set; }
+        public int y { get; set; }
     }
 }
